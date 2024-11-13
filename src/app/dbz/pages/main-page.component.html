@@ -1,0 +1,20 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+
+  <!-- El componente padre le va pasar datos al componente hijo -->
+  <div class="col">
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+
+  <div class="col" >
+    <!-- $event es un nombre especializado que se utiliza para tomar datos que son enviados por el hijo -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+
+</div>
+
+<!-- () = escuchar
+    [] = enviar
+-->
